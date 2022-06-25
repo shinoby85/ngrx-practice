@@ -1,0 +1,10 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  grid-gap: 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+mat-card{
+  width: 250px;
+}
