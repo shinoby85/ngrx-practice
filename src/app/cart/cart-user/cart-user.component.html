@@ -1,1 +1,10 @@
-<p>cart-user works!</p>
+<div>
+  <img [src]="user?.picture?.medium" alt="">
+  <div>
+    <mat-icon (click)="decrement.emit()">remove</mat-icon>
+    {{user?.count}}
+    <mat-icon (click)="increment.emit()">add</mat-icon>
+  </div>
+  <mat-icon (click)="remove.emit()">delete</mat-icon>
+</div>
+

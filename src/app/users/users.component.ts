@@ -5,6 +5,7 @@ import {Store} from "@ngrx/store";
 import {IState} from "../store";
 import {getUsersPending} from "../store/actions/users.actions";
 import {addUserToCart} from "../store/actions/cart.actions";
+import {totalUsers} from "../store/reducers/cart.reducers";
 
 @Component({
   selector: 'app-users',
@@ -15,6 +16,8 @@ export class UsersComponent implements OnInit {
 
   public users$: Observable<IUser[]> = this.store.select('users','items');
   public loading$: Observable<boolean> = this.store.select('users','loading');
+
+
   constructor(private store: Store<IState>) {
   }
 

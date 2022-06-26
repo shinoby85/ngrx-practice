@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatGridListModule} from "@angular/material/grid-list";
-import {HttpClientModule} from "@angular/common/http";
+import {MatIconModule} from "@angular/material/icon";
+import {MatBadgeModule} from "@angular/material/badge";
 
 
 
@@ -14,7 +15,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-
+    MatIconModule,
+    MatBadgeModule
   ]
 })
 export class SharedModule { }

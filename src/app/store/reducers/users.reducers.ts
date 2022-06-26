@@ -1,6 +1,7 @@
 import {IUser} from "../../interfaces";
 import {Action, createReducer, on, State} from "@ngrx/store";
 import {getUsersPending, getUsersSuccess} from "../actions/users.actions";
+import {cartAdapter} from "./cart.reducers";
 
 const initialState: {items:IUser[], loading: boolean} = {
   items: [],
@@ -26,3 +27,5 @@ const scoreboardReducer = createReducer(
 export default function reducer(state: any,action: Action) {
   return scoreboardReducer(state,action);
 }
+
+

@@ -9,6 +9,7 @@ import {effects} from "./store/effects";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppRoutingModule} from "./app-router.module";
 import {HttpClientModule} from "@angular/common/http";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers),
+    SharedModule,
+    StoreModule.forRoot(reducers, {
+      runtimeChecks:{
+        strictStateImmutability: false,
+        strictActionImmutability:false
+      }
+    }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: false,
@@ -30,7 +37,6 @@ import {HttpClientModule} from "@angular/common/http";
     }),
     EffectsModule.forRoot(effects),
     BrowserAnimationsModule,
-
     AppRoutingModule
   ],
   providers: [],

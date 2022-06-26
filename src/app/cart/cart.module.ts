@@ -4,6 +4,7 @@ import { CartUserComponent } from './cart-user/cart-user.component';
 import {CartComponent} from "./cart.component";
 import {RouterModule, Routes} from "@angular/router";
 import {SharedModule} from "../shared/shared.module";
+import {MatIconModule} from "@angular/material/icon";
 
 const route: Routes = [
   {
@@ -19,7 +20,7 @@ const route: Routes = [
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(route)
+    RouterModule.forChild(route),
   ],
   exports:[RouterModule]
 })

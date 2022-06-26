@@ -1,1 +1,6 @@
-<p>cart works!</p>
+<app-cart-user
+  *ngFor="let user of users$ | async; trackBy: trackByFn"
+  [user]="user"
+  (remove)="remove(user)"
+  (decrement)="decrement(user)"
+  (increment)="increment(user)" ></app-cart-user>

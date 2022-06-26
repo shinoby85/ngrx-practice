@@ -15,7 +15,7 @@ const routes:Routes = [
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
   exports:[
     RouterModule
